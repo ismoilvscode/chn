@@ -312,7 +312,7 @@
     `;
   }
 
-  function renderProfile() {
+function renderProfile() {
     const connected = !!state.user;
 
     app.innerHTML = `

@@ -35,16 +35,16 @@ button:active {
 .app-shell{width:min(720px,100%);min-height:100vh;margin:auto;background:radial-gradient(circle at 85% -10%,rgba(239,59,56,.12),transparent 30%),var(--bg)}
 
 /* Ислоҳи сарлавҳа (Top bar) */
-.topbar{height:58px;padding:0 14px;display:flex;align-items:center;justify-content:space-between;border-bottom:1px solid #1b2026;background:rgba(9,11,15,.96);position:sticky;top:0;z-index:50}
-.top-title{font-size:16px;font-weight:500}
-.top-title span{color:#6e757d;margin:0 3px}
-.top-actions{display:flex;align-items:center;gap:8px}
+.topbar{height:0.1px;padding:0 1px;display:flex;align-items:center;justify-content:space-between;border-bottom:0.1px solid #1b2026;background:rgba(9,11,15,.96);position:sticky;top:0;z-index:5}
+.top-title{font-size:0.1px;font-weight:20}
+.top-title span{color:#6e757d;margin:0 1px}
+.top-actions{display:flex;align-items:center;gap:0px}
 
 .dots,
 .close-btn,
 .sheet-close{border:0;background:transparent;color:#aeb4bb;cursor:pointer}
-.dots{font-size:25px;line-height:1}
-.close-btn{font-size:30px;width:34px;height:34px}
+.dots{font-size:0.1px;line-height:1}
+.close-btn{font-size:0.1px;width:0.1px;height:0.1px}
 .brandbar{height:65px;padding:0 10px;display:flex;align-items:center;border-bottom:1px solid var(--line);font-weight:900;font-size:13px;letter-spacing:.04em}
 .brand-dot{display:inline-block;width:8px;height:8px;border-radius:50%;background:var(--red);box-shadow:0 0 12px rgba(239,59,56,.8);margin-right:8px}
 .content{padding:20px 10px 104px}

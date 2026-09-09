@@ -1,0 +1,351 @@
+<!doctype html>
+<html lang="tg">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <meta name="theme-color" content="#090b0f">
+  <meta name="description" content="Chinese Street — омӯзиши гуфтугӯии забони чинӣ">
+  <title>Chinese Street — Learn Chinese</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="app-shell">
+
+    <header class="topbar">
+      <div class="top-title">
+        Learn Chin <span>|</span> English
+      </div>
+
+      <div class="top-actions">
+        <button class="dots" aria-label="Menu">⋮</button>
+        <button id="tgClose" class="close-btn" aria-label="Close">×</button>
+      </div>
+    </header>
+
+    <div class="brandbar">
+      <div>
+        <span class="brand-dot"></span>
+        CHINESE STREET
+      </div>
+    </div>
+
+    <main id="app" class="content"></main>
+
+    <nav class="bottom-nav" aria-label="Navigation">
+
+      <button class="nav-btn active" data-page="home">
+        <span>⌂</span>
+        <small>Асосӣ</small>
+      </button>
+
+      <button class="nav-btn" data-page="lessons">
+        <span>▤</span>
+        <small>Дарсҳо</small>
+      </button>
+
+      <button class="nav-btn" data-page="profile">
+        <span class="nav-avatar" id="navAvatar" aria-hidden="true">Д</span>
+        <small>Кабинет</small>
+      </button>
+
+    </nav>
+  </div>
+
+
+  <!-- PREMIUM MODAL -->
+  <div
+    id="premiumModal"
+    class="modal hidden"
+    aria-hidden="true"
+  >
+
+    <div
+      class="modal-backdrop"
+      data-close-modal
+    ></div>
+
+    <section
+      class="premium-sheet"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="premiumTitle"
+    >
+
+      <button
+        class="sheet-close"
+        data-close-modal
+        aria-label="Close"
+      >
+        ×
+      </button>
+
+      <div class="premium-head">
+
+        <div class="premium-icon">
+          ◆
+        </div>
+
+        <div>
+          <div class="premium-kicker">
+            CHINESE STREET
+          </div>
+
+          <h2 id="premiumTitle">
+            Premium
+          </h2>
+
+          <p>
+            Омӯзиши бештар. Гуфтори воқеӣ. Пешрафти тезтар.
+          </p>
+        </div>
+
+      </div>
+
+
+      <div class="benefits">
+
+        <div>
+          <b>✦</b>
+          <span>Ҳамаи дарсҳои Premium</span>
+        </div>
+
+        <div>
+          <b>◉</b>
+          <span>Гуфтори табиӣ ва slang</span>
+        </div>
+
+        <div>
+          <b>▶</b>
+          <span>Талаффуз ва омӯзиши пайдарпай</span>
+        </div>
+
+      </div>
+
+
+      <div class="choose-title">
+        <span>Интихоби нақша</span>
+        <small>Бекор карданаш осон</small>
+      </div>
+
+      <div
+        id="plans"
+        class="plans"
+      ></div>
+
+
+      <div
+        id="checkout"
+        class="checkout hidden"
+      >
+
+        <div class="checkout-line">
+          <span>Нақша</span>
+          <b id="checkoutPlan">—</b>
+        </div>
+
+
+        <div class="payment-card">
+
+          <div class="payment-label">
+            Пардохт ба рақам
+          </div>
+
+          <div class="payment-number-row">
+
+            <strong id="paymentNumber">
+              +992 985 38 78 83
+            </strong>
+
+            <button
+              id="copyPayment"
+              class="copy-btn"
+            >
+              Нусха
+            </button>
+
+          </div>
+
+          <div class="payment-provider">
+            Рақами пардохт барои фаъолсозии Premium
+          </div>
+
+        </div>
+
+
+        <div class="receipt-block">
+
+          <div class="receipt-title">
+            Қадами охир
+          </div>
+
+          <p>
+            Пас аз пардохт, танҳо
+            <b>акси чек</b>-ро бо камера гир.
+          </p>
+
+
+          <button
+            id="openCamera"
+            class="camera-select"
+            type="button"
+          >
+
+            <span class="camera-icon">
+              ⌾
+            </span>
+
+            <span>
+              <b>Акс гирифтани чек</b>
+              <small>
+                Камера кушода мешавад · танҳо 1 акс
+              </small>
+            </span>
+
+            <span class="arrow">
+              ›
+            </span>
+
+          </button>
+
+
+          <div
+            id="photoPreview"
+            class="photo-preview hidden"
+          >
+
+            <img
+              id="receiptPreviewImg"
+              alt="Акси чек"
+            >
+
+            <div class="preview-footer">
+
+              <span>
+                ✓ Акс омода аст
+              </span>
+
+              <button
+                id="removePhoto"
+                type="button"
+              >
+                Иваз кардан
+              </button>
+
+            </div>
+
+          </div>
+
+        </div>
+
+
+        <button
+          id="sendRequest"
+          class="buy-btn"
+          disabled
+        >
+          Ирсоли заявка
+        </button>
+
+        <p
+          id="requestStatus"
+          class="request-status"
+        ></p>
+
+      </div>
+
+    </section>
+
+  </div>
+
+
+  <!-- CAMERA -->
+  <div
+    id="cameraModal"
+    class="camera-modal hidden"
+    aria-hidden="true"
+  >
+
+    <div
+      class="camera-backdrop"
+      id="closeCamera"
+    ></div>
+
+    <section class="camera-card">
+
+      <div class="camera-header">
+
+        <div>
+          <span>RECEIPT CAMERA</span>
+          <h3>Акси чек</h3>
+        </div>
+
+        <button
+          id="closeCameraBtn"
+          class="sheet-close"
+        >
+          ×
+        </button>
+
+      </div>
+
+
+      <div class="camera-frame">
+
+        <video
+          id="cameraVideo"
+          autoplay
+          playsinline
+          muted
+        ></video>
+
+        <div class="scan-guide">
+
+          <i></i>
+          <i></i>
+          <i></i>
+          <i></i>
+
+          <span>
+            Чекро дар дохили чорчӯба гузор
+          </span>
+
+        </div>
+
+      </div>
+
+
+      <button
+        id="takePhoto"
+        class="shutter"
+        type="button"
+      >
+        <span></span>
+      </button>
+
+
+      <p
+        id="cameraStatus"
+        class="camera-status"
+      >
+        Ба камера иҷозат деҳ.
+      </p>
+
+    </section>
+
+  </div>
+
+
+  <canvas
+    id="receiptCanvas"
+    class="hidden"
+  ></canvas>
+
+
+  <!-- TELEGRAM WEB APP -->
+  <script src="https://telegram.org/js/telegram-web-app.js"></script>
+
+  <!-- APP -->
+  <script src="app.js"></script>
+
+</body>
+</html>
